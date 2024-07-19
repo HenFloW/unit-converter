@@ -3,10 +3,10 @@ export const timeUnitConversions = {
   second: 1,
   minute: 60,
   hour: 3600,
-  day: 86400,
-  week: 604800,
-  month: 2592000, // Approximate value
-  year: 31536000 // Approximate value
+  day: 86_400,
+  week: 604_800,
+  month: 2_629_743.83, // Approximate value
+  year: 31_556_926 // Approximate value
 } as const;
 
 export const timeUnits = {

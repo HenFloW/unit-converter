@@ -24,7 +24,7 @@ describe('Time Unit Conversions', () => {
   test('days conversion', () => {
     expect(day`24 hours`).toBe(1);
     expect(day`1 week`).toBe(7);
-    expect(day`1 month`).toBeCloseTo(30);  // Using an average month for simplicity
+    expect(day`1 month`).toBeCloseTo(30.4);  // Using an average month for simplicity
   });
 
   test('weeks conversion', () => {

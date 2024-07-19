@@ -8,7 +8,7 @@ type TemplateLiteralFunction = (strings: TemplateStringsArray, ...values: string
 export function createTaggedTemplateLiteral<U extends Record<string, number>>(
   aliasMap: AliasMap,
   unitConversions: U,
-  precision = 2,
+  precision = 1,
 ): { [K in keyof U]: TemplateLiteralFunction } {
   const result: { [K in keyof U]: TemplateLiteralFunction } = {} as { [K in keyof U]: TemplateLiteralFunction };
   (Object.keys(unitConversions) as Array<keyof U>).forEach(unit => {
@@ -22,7 +22,7 @@ export function createTaggedTemplateLiteral<U extends Record<string, number>>(
         }
         return total;
       }, 0);
-      return Math.round((total / unitConversions[unit]) * (10^precision-1)) / (10^precision-1);
+      return Math.round((total / unitConversions[unit]) * (10**(precision))) / (10**(precision));
     };
   });
   return result;

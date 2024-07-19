@@ -43,6 +43,6 @@ describe('Length Unit Conversions', () => {
 
   test('metric and imperial conversion', () => {
     expect(centimeter`15 inches`).toBeCloseTo(38.1)
-    expect(centimeter`3 feet`).toBeCloseTo(91.44)
+    expect(centimeter`3 feet`).toBeCloseTo(91.4)
   })
 });
